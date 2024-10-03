@@ -18,14 +18,10 @@
 // }
 // page4Animation()
 
-// LOCOMOTIVEJS
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('.main'),
-//     smooth: true
-// });
 
 
-// NAV
+// LOCOMOTIVE-JS
+
 
 // PAGE-03 //
 function page3Animation() {
@@ -71,41 +67,39 @@ function page3Animation() {
 page3Animation();
 
 
-
-
 // page-03-button
-// const button = document.querySelector('.pg2-btn');
+const button = document.querySelector('.pg2-btn');
 
-// button.addEventListener('mousemove', (e) => {
-//     // const { left, top, width, height } = button.getBoundingClientRect();
-//     const x = e.clientX - left; 
-//     const y = e.clientY - top;  
+button.addEventListener('mousemove', (e) => {
+    const { left, top, width, height } = button.getBoundingClientRect();
+    const x = e.clientX - left; 
+    const y = e.clientY - top;  
 
     
-//     const xMove = ((x / width) - 0.5) * 20; 
-//     const yMove = ((y / height) - 0.5) * 20; 
+    const xMove = ((x / width) - 0.5) * 20; 
+    const yMove = ((y / height) - 0.5) * 20; 
 
   
-//     button.style.transform = `translate(${xMove}px, ${yMove}px)`;
-// });
+    button.style.transform = `translate(${xMove}px, ${yMove}px)`;
+});
 
 
-// button.addEventListener('mouseleave', () => {
-//     button.style.transform = 'translate(0, 0)';
-// });
+button.addEventListener('mouseleave', () => {
+    button.style.transform = 'translate(0, 0)';
+});
 
 // PAGE-02
-// const circleDiv = document.querySelector('.circle-div');
+const circleDiv = document.querySelector('.circle-div');
 
-// document.addEventListener('mousemove', (e) => {
-//     const x = e.clientX;
-//     const y = e.clientY;
-//     circleDiv.style.transform = `translate(${x - circleDiv.clientWidth / 2}px, ${y - circleDiv.clientHeight / 2}px)`;
-// });
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    circleDiv.style.transform = `translate(${x - circleDiv.clientWidth / 2}px, ${y - circleDiv.clientHeight / 2}px)`;
+});
 
-// window.addEventListener('scroll', () => {
-//     circleDiv.style.transform = `translate(${circleDiv.offsetLeft}px, ${window.scrollY + 10}px)`;
-// });
+window.addEventListener('scroll', () => {
+    circleDiv.style.transform = `translate(${circleDiv.offsetLeft}px, ${window.scrollY + 10}px)`;
+});
 
 // LOADER
 function loaderAnimation() {
@@ -116,23 +110,3 @@ function loaderAnimation() {
 }
 loaderAnimation();
 
-// HAMBURGUR
-const hamburgerIcon = document.getElementById('hamburger-icon');
-const crossIcon = document.getElementById('cross-icon');
-const menu = document.getElementById('menu');
-
-// Click event for the hamburger icon to open the menu
-hamburgerIcon.addEventListener('click', () => {
-    console.log("helo")
-  menu.style.display = 'flex'; // Show the menu
-  menu.style.flexDirection = 'column'; 
-  hamburgerIcon.classList.add('hidden'); 
-  crossIcon.classList.remove('hidden'); 
-});
-
-// Click event for the cross icon to close the menu
-crossIcon.addEventListener('click', () => {
-  menu.style.display = 'none'; // Hide the menu
-  hamburgerIcon.classList.remove('hidden'); // Show the hamburger icon
-  crossIcon.classList.add('hidden'); // Hide the cross icon
-});

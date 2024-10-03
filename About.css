@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    position: relative;
+    z-index: 10;
+}
+
+.pageabout{
+    background-color: white;
+
+}
+
+.line-cir{
+  width: 100%;
+ padding-left: 14vw;
+ position: relative;
+ height:2vw;
+ z-index: 10;
+ background-color: white;
+}
+
+.line-cir .lin{
+    width: 85%;
+    height: 1px;
+    background-color: rgb(160, 156, 156);
+}
+
+.circ{  
+    position: absolute;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    background-color: #455CE9;
+    bottom: -200%;
+    left: 70%;
+}
+
+.circ>i{
+    font-size: 7vw;
+    font-weight: 200;
+    color: white;
+    position: absolute;
+    left: 20%;
+    bottom: 19%;
+}
+
+/* SEC-02 */
+.sec-2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw;
+    background-color: #FAFBFB;
+    z-index: 10;
+}
+
+.sec2-lft{
+    flex-basis: 37%;
+    padding: 0.7vw 4vw;
+    font-size: 1.5vw;
+    line-height: 2.3vw;
+    opacity: 0.9;
+}
+
+
+.sec2-right{
+    flex-basis: 60%; 
+    width: 50vw;
+    height: 60vw;
+    background-image: url(https://dennissnellenberg.com/assets/img/DSC07312-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.sec2-right {
+    flex-basis: 60%;
+}
+
+.sec2-right > img {
+    width: 48vw; 
+    height: 60vw; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+/* SEC-03 */
+.sec3{
+    width: 100%;
+    background-color: #EAEBEC;
+}
+
+.sec3-top>h2{
+    font-size: 3vw;
+    font-weight: 500;
+    color:#1C1D20;
+    padding: 5vw;
+    padding-bottom: 2vw; 
+}
+
+.sec3-line{
+    width: 100%;
+    background-color: rgb(187, 180, 180);
+    height: 1px;
+}
+
+.sec3-btm{
+    display: flex;
+    padding: 5vw;
+   justify-content: space-between;
+   color: #1C1D20;
+}
+
+.sec3-btm1{
+    flex-basis: 30%;
+}
+
+.sec3-btm1>h3{
+    font-size: 2vw;
+    font-weight: 300;
+    color: #1C1D20;
+
+}
+
+.sec3-btm1>p{
+font-size: 1.5vw;
+padding-top: 2vw;
+color: #1C1D20;
+line-height: 2.2vw;
+}
+
+.sec3-btm1>h4{
+    padding-bottom: 2vw;
+    opacity: 0.5;
+}
+
+/* SEC-04 */
+.sec-4{
+    position: relative;
+    width: 100%;
+   min-height: 100vh;
+    display: flex;
+    gap: 5vw;
+    padding: 5vw;
+    z-index: 10;
+    background-color: white;
+}
+
+.sec4-lft{
+    flex-basis: 35%;
+    height: 85vh;
+    padding-left: 8vw;
+    background-image: url(https://dennissnellenberg.com/assets/img/DSC07079.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sec4-right{
+    flex-basis: 40%;
+}
+
+
+.sec4-right>h1{
+    padding-top: 8vw;
+    font-size: 3.5vw;
+    width: 60%;
+}
+
+.sec4-right>p{
+    padding-top: 2vw;
+    font-size: 1.6vw;
+}
+
+
+
+
+#footer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #1C1D20;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+
+
+
+#footer h2 {
+    position: absolute;
+    top: 5vw;
+    left: 15vw;
+    font-size: 5vw;
+    font-weight: 300;
+}
+
+#footer-line {
+    border-top: 1px solid rgba(128, 128, 128, 0.699);
+    height: 10vh;
+    width: 70%;
+    position: absolute;
+    top: 23vw;
+    margin-left: 11vw;
+}
+
+.ftr-btn{
+    position: absolute;
+    top: 27vw;
+    left: 15vw;
+    display: flex;
+    gap: 10px;
+}
+
+.ftr-btn1, .ftr-btn2 {
+    border: 1px solid rgba(226, 223, 223, 0.171);
+    background-color: transparent;
+    color: #fff;
+    padding: 2vw 4vw; 
+    border-radius: 50px; 
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden; 
+    transition: color 0.3s ease;
+}
+
+.ftr-btn1::before, .ftr-btn2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color:#455CE9;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: height 0.5s ease;
+}
+
+.ftr-btn1:hover::before, .ftr-btn2:hover::before {
+    height: 100%; 
+}
+
+.ftr-btn1:hover, .ftr-btn2:hover {
+    color: #fff; 
+}
+
+.circle-div-ftr {
+    margin-top: 0vw; 
+    width: 12vw; 
+    height: 12vw; 
+    border-radius: 50%; 
+    background-color:#455CE9; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s; 
+    position: relative; /* Positioning for cursor effect */
+    cursor: pointer; 
+    position: absolute;
+    top: 17vw;
+    left: 65vw;
+}
+
+.circle-content {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+}
+   

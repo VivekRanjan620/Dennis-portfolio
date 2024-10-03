@@ -22,15 +22,15 @@ body{
 
 :root {
     --primary-color: #ffff;
-    --secondary-color: #455CE9;
-    --body-color:#999D9E;
+    --secondary-color: #2ecc71;
     --font-size: 16px;
 }
+
 
 .main {
     width: 100%;
      min-height: 100%; 
-    background-color: var(--body-color);
+    background-color: #999D9E;
     position: relative;
     z-index: 10;
 
@@ -58,29 +58,11 @@ nav .nav-second a {
     text-decoration: none;
     position: relative; 
     display: inline-block;
-    transition: transform 0.3s ease; 
+    transition: transform 0.2s ease; /* Smooth transition */
 }
 
-nav .nav-second a:hover {
+nav a:hover {
     transform: translateY(-7px) translateX(0px); 
-}
-
-nav .nav-second a .circle1 {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    transition: width 0.3s ease, height 0.3s ease, bottom 0.3s ease; 
-    transform: translateX(-50%);
-}
-
-nav .nav-second a:hover .circle1 {
-    width: 8px; 
-    height: 8px;
-    bottom: -15px; 
 }
 
 
@@ -98,7 +80,6 @@ nav .nav-second a:hover .circle1 {
     max-height: 100%; 
     object-fit: cover;
 }
-
 .main-left{
 position: absolute;
 top: 40%;
@@ -107,16 +88,10 @@ color: var(--primary-color);
 font-weight: 100;
 }
 
-.main-left>i{
-    font-size: 2.5vw;
-    font-weight: 100;
-    bottom: 8vw;
-}
-
 
 /*MOVING-SEC */
 .mov-cont{
-height: 10vh;  
+height: 10vh;
 width: 100%;
 position: absolute;
 top: 55%;
@@ -167,7 +142,7 @@ overflow-x: auto;
     padding: 20px 20px 20px 40px;
     position: absolute; 
     top: 30%;
-    background-color: rgba(0, 0, 0, 0.856);
+     background-color: rgba(0, 0, 0, 0.856);
    width: 20%;
    height: fit-content;
    border-radius:0px 45px 45px 0 ;
@@ -202,91 +177,6 @@ border-radius: 50%;
 background-color: gray;
 }
 
-/* HUMBURGUR */
-.content {
-    padding: 20px;
-}
-
-#hamburger-menu {
-    position: fixed;
-    top: 8vw;
-    right: 20px;
-    width: 70px;
-    height: 70px;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; 
-    z-index: 1000;
-    transition: transform 0.5s ease-in-out;
-}
-
-#hamburger-menu:hover{
-    background-color: var(--secondary-color);
-}
-
-.hamburger-icon, .cross-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hidden {
-    display: none;
-}
-
-.menu {
-    position: fixed;
-    top: 90px; 
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-radius: 10px;
-    display: none; 
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    width: 35vw; 
-    height: 40vw;
-    z-index: 999; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 3vw;
-    display: flex; 
-    align-items: center; 
-    margin: 5px 0; 
-    padding: 10px;
-    border-radius: 5px; 
-    position: relative; 
-    transition: 0.3s ease-in; 
-}
-
-.circle {
-    width: 10px; 
-    height: 10px; 
-    background-color: white;
-    border-radius: 50%; 
-    margin-right: 10px; 
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
-}
-
-.menu a:hover .circle {
-    opacity: 1;
-}
-
-.menu a:hover {
-    transform: translateY(-8px) translateX(15px);
-}
-
-
 /* PAGE-02 */
 .page2 {
     width: 100%;
@@ -299,21 +189,14 @@ background-color: gray;
 .pg2-cnt {
     padding: 12vw;
     display: flex;
-    align-items: flex-start; /* Ensure items align to the top */
+    align-items: center;
 }
 
-.pg-right h3 {
+.pgr-right h3 {
     width: 90%;
     font-size: 2vw;
     line-height: 3vw;
     color: rgba(0, 0, 0, 0.74);
-    font-weight: 500;
-}
-
-.pg2-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2vw; 
 }
 
 .pg2-left p {
@@ -323,29 +206,32 @@ background-color: gray;
 }
 
 .circle-div {
-    width: 12vw;
-    height: 12vw;
-    border-radius: 50%;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    cursor: pointer;
+    margin-top: 0vw; 
+    width: 12vw; 
+    height: 12vw; 
+    border-radius: 50%; 
+    background-color: black; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s; 
+    position: relative; /* Positioning for cursor effect */
+    cursor: pointer; 
 }
 
 .circle-div:hover {
-    background-color: rgb(95, 95, 187);
+   
+ background-color: rgb(95, 95, 187); 
 }
 
 .circle-content {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.2rem;
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
 }
-
-    /* PAGE-03 */
+   
+    /* SEC-03 */
     #page3 {
         min-height: 100vh;
         width: 100%;
@@ -460,54 +346,6 @@ background-color: gray;
     .pg3-btn:hover::before {
         top: 0; 
     }
-
-    /* PAGE-03-SEE ONLY-RESP */
-    .grid-container-hm{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        /* max-width: 100%; */
-        width: 100%;
-        background-color: var(--primary-color);
-        z-index: 10;
-        position: relative;
-      }
-
-      .grid-container-hm{
-        display: none;
-      }
-    
-      .card-hm{
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .card-image-hm {
-        background-image: url('https://dennissnellenberg.com/media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice.jpg'); 
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 35vw;
-    }
-    
-    .card-hm:nth-child(2) .card-image-hm {
-        background-image: url('https://dennissnellenberg.com/media/pages/work/the-damai/b511d32d21-1710452224/thumbnail-thedamai-v2.jpg'); 
-    }
-        
-    .card-cnt h2{
-        font-size: 3vw;
-        position: relative;
-        z-index: 9;
-        color: #010307d5;
-        padding: 2vw;
-        margin-left: 6vw;
-    }
-    
-    .card-cnt  p{
-        font-size: 2vw;
-       color: #1C1D20;
-       margin-left: 8vw;
-    }
     
 
     /* PAGE-04 */
@@ -519,7 +357,7 @@ background-color: gray;
         margin: 0;
         position: relative;
         z-index: 10;
-   }
+    }
 
     .grid-container {
         display: grid;
@@ -630,19 +468,7 @@ background-color: gray;
         position: absolute;
         top: 17vw;
         left: 65vw;
-        transition: 0.3s ease-in;
     }
-
-    .circle-div-ftr:hover{
-        background-color: rgb(48, 48, 224);
-    }
-
-    .circle-content-ftr {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-size: 1rem;
-    }
-    
 
       /* LOADER */
       #loader{
@@ -694,190 +520,9 @@ background-color: gray;
         }
     }
     
-    @media (max-width:575px) {
+    @media (max-width:600px) {
         #loader h1{
             font-size: 9vw;
-        }
-        /* PAGE-01-MAIN */
-        .nav-second{
-           z-index: 11;
-        }
-
-        .located{
-            display:none;
-        }
-
-        #hamburger-menu{
-            display: none;
-        }
-
-        .main-left{
-           top: 70%; 
-           left: 20%;
-        }
-
-        .main-left h2{
-            font-size: 4vw;
-            font-weight: 300;
-        }
-
-        .mov-cont{
-          top: 30%;
-        }
-
-        .pg-right{
-           display: none;
-        }
-        
-        .pg2-left p{
-            display: none;
-        }
-
-        /* PAGE-02 */
-        .page2{
-             height: 40vw;
-        }
-
-        .circle-div{
-             width: 25vw;
-             height: 25vw;
-             position: absolute;
-             left: 65%;
-        }
-
-        /* PAGE-03 */
-        #page3{
-            display: none;
-        }
-
-        /* PAGE-03-SEE ONLY-RESP */
-        .grid-container-hm {
-            display: grid; /* Show only on responsive screens */
-            grid-template-columns: 1fr ;
-            gap: 20px;
-            width: 100%;
-            background-color: var(--primary-color);
-            z-index: 10;
-            position: relative;
-        }
-
-         .card-image-hm  {
-            width: 100%; 
-            height: 65vw; 
-            padding: 2vw;
-            /* margin: 6vw; */
-        }
-
-        .card-cnt h2{
-            font-size: 5vw;
-            color: rgb(70, 70, 70);
-        }
-
-        .card-cnt p:nth-child(2){
-            padding-bottom: 3vw;
-        }
-
-      
-
-        /* FOOTER */
-        .ftr-btn{
-            flex-direction: column;
-        }
-        .ftr-btn1, .ftr-btn2{
-            padding: 4vw 18vw;
-            font-size: 3vw;
-        }
-
-        .circle-div-ftr {
-            width: 17vw;
-            height: 17vw;
-        }
-    }
-
-    @media (min-width:576px) and (max-width:991px){
-
-        /* PAGE-01 */
-        .main{
-            min-height: 170%;
-        }
-
-        #hamburger-menu{
-            display: none;
-        }
-
-        .located{
-            display:none;
-        }
-
-        .nav-second{
-            z-index: 11;
-         }
           
-         /* PAGE-02 */
-         .page2{
-            height: 50vw;
-           }
-
-        .pg2-cnt{
-            flex-direction: column;
-            padding: 8vw;
-        }
-        
-        .pg-right h3{
-            width: 90%;
-            font-size: 3vw;
-            line-height: 5vw;
-        }
-
-        .pg2-left p{
-            padding-top: 2vw;
-            line-height: 4vw;
-            width: 50%;
-            color: rgb(48, 47, 47);
-        }
-
-        .circle-div{
-            width: 25vw;
-            height: 25vw;
-            position: absolute;
-            left: 65%;
-       }
-
-          /* PAGE-03 */
-        #page3{
-            display: none;
-        }
-
-         /* PAGE-03-SEE ONLY-RESP */
-         .grid-container-hm {
-            display: grid; /* Show only on responsive screens */
-            grid-template-columns:  repeat(2, 1fr);
-            gap: 20px;
-            width: 100%;
-            background-color: var(--primary-color);
-            z-index: 10;
-            position: relative;
-        }
-
-         .card-image-hm  {
-            width: 100%; 
-            height: 45vw; 
-            padding: 2vw;
-            /* margin: 6vw; */
-        }
-
-        .card-cnt h2{
-            font-size: 5vw;
-            color: rgb(70, 70, 70);
-        }
-
-        .card-cnt p:nth-child(2){
-            padding-bottom: 3vw;
-        }
-    }
-
-    @media (min-width:992px) and (max-width:1123px){
-        .main{
-            min-height: 170%;
         }
     }
