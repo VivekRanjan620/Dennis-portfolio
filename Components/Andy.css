@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: neu;
+  src: url(./NeueMontreal-Regular.otf);
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  z-index: 999;
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #333335; 
+  border-radius: 50%;
+  padding: 10px 15px;
+  color: rgb(189, 183, 183);
+  transition: transform 0.3s ease; 
+}
+
+.cross-icon {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  position: fixed; 
+  top: 50px;
+  right: 30px;
+  z-index: 1001; 
+  color: white;
+  background-color: #333335; 
+  border-radius: 50%; 
+  padding: 10px 15px;
+  transition: transform 0.3s ease; 
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  height: 100%;
+  width: 400px;
+  background-color: #1C1D20;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+  display: none;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.hamburger-icon:hover{
+  background-color: rgb(61, 61, 218);
+}
+.cross-icon:hover{
+  background-color:  rgb(61, 61, 218);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.2s;
+  font-size: 2.5vw;
+  display: flex;
+  gap: 1vw;
+  margin-top: 2vw;
+  padding-left: 5vw;
+  transition: transform 0.3s ease; 
+}
+.menu>a:hover{
+  transform: translateX(10px);
+  transform: translateY(-8px);
+}
+.hidden {
+  display: none;
+}
+
+.menu.active {
+  display: flex; 
+  right: 0; 
+}
+
+.menu.active ~ .cross-icon {
+  display: block; 
+}
+
+.menu.active ~ .hamburger-icon {
+  display: none; 
+}
+
+
+
+.main {
+  position: relative;
+  z-index: 10;
+}
+
+.pageabout {
+  background-color: white;
+}
+
+.page1 {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+}
+
+nav {
+  padding: 3vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: black;
+}
+
+.nav-first p {
+  font-weight: 400;
+  color: black;
+  font-family: neu;
+}
+
+nav .nav-second {
+  display: flex;
+  gap: 2vw;
+}
+
+nav .nav-second a {
+  font-family: neu;
+  font-size: 1.5vw;
+  opacity: 0.9;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect for the a tags */
+nav .nav-second a::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+/* When hovering the a tag */
+nav .nav-second a:hover {
+  transform: translateY(-7px);
+}
+
+nav .nav-second a:hover::after {
+  transform: translateX(-50%) scale(1);
+}
+
+.pg1-cnt {
+  width: 100%;
+  height: 100%;
+  padding: 8vw 14vw 1vw 14vw;
+  background-color: white;
+}
+
+.pg1-cnt1 h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  color: black;
+  opacity: 0.9;
+  font-family: neu;
+}
+
+/* PAGE-02 */
+.page2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 5vw 0;
+  padding-left: 3vw;
+  padding-right: 9vw;
+}
+
+.page2 .pg2-1 > p {
+  color: rgba(97, 96, 96, 0.705);
+  margin-bottom: 2vw;
+  font-size: 12px;
+  font-family: neu;
+}
+
+.pg2-ln {
+  margin-top: 1vw;
+  width: 120%;
+  height: 1px;
+  background-color: rgba(104, 99, 99, 0.308);
+}
+
+.page2 .pg2-1:nth-child(3) {
+  width: 15%;
+}
+
+.page2 .pg2-1 > h4 {
+  font-size: 1.5vw;
+  font-weight: 200;
+  color: rgb(22, 21, 21);
+  margin-top: 2vw;
+  opacity: 0.9;
+  font-family: neu;
+}
+
+/* PAGE 3 IMAGE */
+.pg3-IMG {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 7vw;
+  background-color: white;
+}
+
+.pg3-IMG > img {
+  width: 85%;
+  height: auto;
+  max-height: 150vh;
+  object-fit: cover;
+}
+
+/* Overlay Image */
+.overlay-img {
+  position: absolute;
+  width: 300px;
+  height: auto;
+}
+
+/* Rounded div on top-right */
+.pg3-round {
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  background-color: #455ce9;
+  top: -120px;
+  right: 120px;
+  z-index: 1;
+}
+
+.pg3-round > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.3vw;
+  font-weight: 500;
+  display: flex;
+  gap: 2px;
+  font-family: neu;
+}
+
+/* PAGE-04 */
+.page4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 110vh;
+  background-color: #e4e8e8;
+  position: relative;
+  flex-direction: column;
+  gap: 8vw;
+}
+
+.laptop-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  /* max-width: 800px; */
+  margin: auto;
+  margin-top: 8vw;
+}
+
+.laptop-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 7vw;
+}
+.pg4 {
+  position: absolute;
+  height: 70vh;
+  width: 79%;
+  top: 10px;
+  left: 10.3%;
+  border-radius: 15px;
+}
+.OverlayAndy4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* PAGE-04F */
+.page4F {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 130vh;
+  background-color: #e4e8e8;
+}
+
+.pg4-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding: 8vw 0;
+}
+
+.imgphn {
+  position: relative;
+  width: 20%;
+  margin: 0 1vw;
+}
+
+.imgphn .phone-frame {
+  width: 100%;
+  height: auto;
+  padding-bottom: 8vw;
+}
+
+.img1 {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  width: 90%;
+  height: 79%;
+}
+
+.img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* PAGE-05 */
+.page5 {
+  width: 100%;
+  height: 115vh;
+  background-image: url(https://dennissnellenberg.com/media/pages/work/andy-hardy/21ce736523-1646837255/andy-hardy-people-accomodation-photographer-filmmaker-australia-16-2160x2160.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 0;
+  position: relative;
+}
+.page5 > h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: neu;
+  color: white;
+  font-size: 3em;
+  font-weight: 200;
+}
+
+/* PAGE-06 */
+.page6 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page6 > img {
+  object-fit: cover;
+  width: 70%;
+  height: 80vh;
+  padding-bottom: 5vw;
+}
+
+.page7 {
+  width: 100%;
+  min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  background-color: white;
+}
+.page7 > video {
+    width: 70%;    
+    height: auto;
+    padding-bottom: 7vw;
+}
+
+/* PAGE-07 */
+.pageblank {
+  width: 100%;
+  height: 100vh;
+}
+
+/* FOOTER */
+/* FOOTER */
+#footer {
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  background-color: #1c1d20;
+  color: #fff;
+  z-index: 9;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 3vw;
+}
+
+#footer h2 {
+  position: absolute;
+  font-size: 5vw;
+  top: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-family: neu;
+}
+
+#footer-line {
+  border-top: 1px solid rgba(128, 128, 128, 0.699);
+  height: 10vh;
+  width: 70%;
+  position: absolute;
+  top: 23vw;
+  margin-left: 11vw;
+}
+
+.ftr-btn {
+  position: relative;
+  top: 27vw;
+  left: 15vw;
+  display: flex;
+  gap: 10px;
+}
+
+.ftr-btn1 {
+  border: 1px solid rgba(226, 223, 223, 0.171);
+  background-color: transparent;
+  color: #fff;
+  padding: 1.5vw 2.5vw;
+  border-radius: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: 25%;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+.ftr-btn1 > p {
+  font-size: 1.5vw;
+  font-family: neu;
+}
+
+.ftr-btn1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #455ce9;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: height 0.5s ease;
+}
+
+.ftr-btn1:hover::before {
+  height: 100%;
+}
+
+.ftr-btn1:hover {
+  color: #fff;
+}
+
+.circle-div-ftr {
+  margin-top: 0vw;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  background-color: #455ce9;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  position: relative;
+  cursor: pointer;
+  position: absolute;
+  top: 17vw;
+  left: 65vw;
+}
+
+.circle-content {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: neu;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(12, 12, 12);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  transition: all ease 0.5s;
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.loader > h1 {
+  font-size: 4vw;
+  color: transparent;
+  background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text;
+  position: absolute;
+  opacity: 0;
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  font-family: neu;
+}
+
+.loader h1:nth-child(2) {
+  animation-delay: 2s;
+}
+.loader h1:nth-child(3) {
+  animation-delay: 3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .loader h1 {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 575px) {
+  nav .nav-second{
+    display: none;
+}
+  .page2 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .page2 .pg2-1 > h4 {
+    font-size: 4.5vw;
+    padding-top: 2vw;
+    padding-bottom: 7vw;
+  }
+  .pg2-ln {
+    width: 150%;
+  }
+  .page2 .pg2-1:nth-child(2) {
+    width: 55%;
+  }
+  .page2 .pg2-1:nth-child(3) {
+    width: 55%;
+  }
+  .pg3-round {
+    position: absolute;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    top: -170px;
+    right: 60px;
+    z-index: 1;
+  }
+  .pg3-round > p {
+    font-size: 3.7vw;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+  .pg3-IMG > img {
+    width: 100%;
+  }
+  .page4 {
+    min-height: 80vh;
+    padding-bottom: 20vw;
+  }
+  .laptop-container {
+    width: 90%;
+  }
+  .pg4-video {
+    padding-top: 10vw;
+    min-height: 40vh;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .page4F {
+    min-height: 30vh;
+  }
+  .page6 {
+    min-height: 70vh;
+  }
+  /* FOOTER */
+  #footer h2 {
+    font-size: 7vw;
+  }
+  #footer-line {
+    top: 27vw;
+  }
+  .ftr-btn {
+    top: 45vw;
+    flex-direction: column;
+  }
+  .ftr-btn1,
+  .ftr-btn2 {
+    padding: 4vw 22vw;
+    font-size: 2.5vw;
+  }
+  #footer > i {
+    top: 8%;
+    right: 10%;
+    font-size: 22px;
+  }
+  .circle-div-ftr {
+    width: 25vw;
+    height: 25vw;
+    left: 55vw;
+    top: 15vw;
+  }
+  .circle-div-ftr .circle-content {
+    font-size: 3.3vw;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  nav .nav-second{
+    display: none;
+}
+  .pg3-IMG > img {
+    padding-top: 15vw;
+    width: 90%;
+    max-height: 65vh;
+  }
+  .pg3-round {
+    position: absolute;
+    width: 17vw;
+    height: 17vw;
+    top: -28px;
+    right: 130px;
+  }
+  .pg3-round > p {
+    font-size: 1.8vw;
+    opacity: 0.9;
+    font-weight: 400;
+  }
+  .page4 {
+    min-height: 80vh;
+    padding-bottom: 20vw;
+  }
+  .laptop-container {
+    width: 90%;
+  }
+  .pg4-video {
+    padding-top: 10vw;
+    min-height: 40vh;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .page6 {
+    min-height: 70vh;
+    padding-bottom: 5vw;
+  }
+  /* FOOTER */
+  #footer h2 {
+    font-size: 7vw;
+  }
+  #footer-line {
+    top: 27vw;
+  }
+  .ftr-btn {
+    top: 45vw;
+    flex-direction: column;
+  }
+  .ftr-btn1,
+  .ftr-btn2 {
+    padding: 4vw 22vw;
+    font-size: 2.5vw;
+  }
+  #footer > i {
+    top: 8%;
+    right: 10%;
+    font-size: 22px;
+  }
+  .circle-div-ftr {
+    width: 25vw;
+    height: 25vw;
+    left: 55vw;
+    top: 15vw;
+  }
+  .circle-div-ftr .circle-content {
+    font-size: 3.3vw;
+  }
+}

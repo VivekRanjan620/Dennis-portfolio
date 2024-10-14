@@ -7,7 +7,10 @@ html,body{
     width: 100%;
     height: 100%;
 }
-
+.pageblank{
+    width: 100%;
+    height: 100vh;
+}
 .main{
     position: relative;
     z-index: 10;
@@ -41,6 +44,9 @@ html,body{
     background-color: #455CE9;
     bottom: -200%;
     left: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circ>i{
@@ -50,11 +56,15 @@ html,body{
     position: absolute;
     left: 20%;
     bottom: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* SEC-02 */
 .sec-2{
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     padding: 5vw;
@@ -149,7 +159,7 @@ line-height: 2.2vw;
 .sec-4{
     position: relative;
     width: 100%;
-   min-height: 100vh;
+    height: 100vh;
     display: flex;
     gap: 5vw;
     padding: 5vw;
@@ -283,3 +293,203 @@ line-height: 2.2vw;
     font-size: 1.2rem; 
 }
    
+@media (max-width:575px){
+    nav .nav-second{
+        display: none;
+    }
+    .line-cir{
+        width: 100%;
+        padding-left: 6.3vw;
+    }
+    .circ{  
+        position: absolute;
+        width: 35vw;
+        height: 35vw;
+        border-radius: 50%;
+        background-color: #455CE9;
+        /* bottom: -550%; */
+        top: -65px;
+        left: 45%;
+    }
+    
+    .circ>i{
+        font-size: 15vw;
+        font-weight: 200;
+        color: white;
+         position: absolute;
+        left: 27%;
+        bottom: 29%;
+    }
+    /* SEC-02  */
+    .sec-2{
+        flex-direction: column;
+    }
+    .sec2-lft{
+        width: 100%;
+        font-size: 5vw;
+        line-height: 6.3vw;
+        padding-left: 2vw;
+        padding-top: 25vw;
+    }
+    .sec2-right{
+        width: 100%;
+        height: 100%;
+    }
+    /* SEC-03 */
+    .sec3{
+        background-color: white;
+    }
+    .sec3-top>h2{
+      font-size: 8vw;
+    }
+    .sec3-btm{
+        flex-direction: column;
+    }
+    .sec3-btm1>h3{
+      font-size: 6vw;
+      padding: 5vw 0;
+    }
+      .sec3-btm1>p{
+        width: 85%;
+        font-size: 4.5vw;
+         padding-bottom: 6vw;
+        line-height: 5.5vw;
+        }
+        /* SEC-04 */
+        .sec-4{
+            flex-direction: column-reverse; 
+            padding-top: 1vw;
+            height: 110vh;
+        }
+        .sec4-right{
+            width: 100%;
+        }
+        .sec4-right>h1{
+            padding-top: 1vw;
+            font-size: 9vw;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .sec4-right>p{
+            padding-top: 2vw;
+            font-size: 3.6vw;
+            line-height: 25px;
+        }
+        .sec4-lft{
+            height: 50vh;
+            flex-basis: 100%;
+        }
+        /* FOOTER */
+#footer h2 {
+    font-size: 7vw;
+  }
+  #footer-line {
+    top: 27vw;
+  }
+  .ftr-btn{
+    top: 45vw;
+    flex-direction: column;
+  }
+  .ftr-btn1, .ftr-btn2 {
+    padding: 4vw 22vw;
+    font-size: 2.5vw;
+  }
+  #footer>i{
+  top: 8%;
+  right: 10%;
+  font-size: 22px;
+  }
+  .circle-div-ftr{
+    width: 25vw; 
+    height: 25vw; 
+    left: 55vw;
+    top: 15vw;
+  }
+  .circle-div-ftr .circle-content{
+    font-size: 3.3vw;
+  }
+}
+
+@media (min-width:576px) and (max-width:991px){
+    nav .nav-second{
+        display: none;
+    }
+    /* SEC-02  */
+    .sec-2{
+        flex-direction: column;
+    }
+    .sec2-lft{
+        width: 100%;
+        font-size: 3vw;
+        line-height: 5.3vw;
+        padding-left: 2vw;
+        padding-top: 25vw;
+    }
+    .sec2-right{
+        width: 100%;
+        height: 100%;
+    }
+    /* SEC-03 */
+    .sec3{
+        background-color: white;
+    }
+    .sec3-top>h2{
+        font-size: 5vw;
+      }
+      .sec3-btm1>h3{
+        font-size: 3vw;
+        padding: 5vw 0;
+        padding-bottom: 2vw;
+      }
+      .sec3-btm1>p{
+          font-size: 2.5vw;
+          padding-bottom: 5vw;
+          line-height: 3.5vw;
+          }
+          /* SEC-04 */
+          .sec-4{
+            height: 60vh;
+            padding-left: 12vw;
+          }
+          .sec4-lft{
+            height: 35vh;
+            padding-left: 16vw;
+            flex-basis: 45%;
+        }
+        .sec4-right>p{
+            padding-top: 3vw;
+            font-size: 2.2vw;
+            line-height: 27px;
+            opacity: 0.8;
+        }
+        /* FOOTER */
+#footer h2 {
+    font-size: 7vw;
+  }
+  #footer-line {
+    top: 27vw;
+  }
+  .ftr-btn{
+    top: 45vw;
+    flex-direction: column;
+  }
+  .ftr-btn1, .ftr-btn2 {
+    padding: 4vw 22vw;
+    font-size: 2.5vw;
+  }
+  #footer>i{
+  top: 8%;
+  right: 10%;
+  font-size: 22px;
+  }
+  .circle-div-ftr{
+    width: 25vw; 
+    height: 25vw; 
+    left: 55vw;
+    top: 15vw;
+  }
+  .circle-div-ftr .circle-content{
+    font-size: 3.3vw;
+  }
+}
+
