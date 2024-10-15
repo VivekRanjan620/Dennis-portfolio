@@ -483,6 +483,26 @@ body {
     font-family: neu;
 }
 
+.btm2{
+  position: absolute;
+  top: 90%;
+  right: -15%;
+  transform: translate(-50% , -50%);
+  background-color: var(--fourth-color);
+  gap: 1vw;
+  padding: 3vw;
+  display: flex;
+}
+
+.btm2>a{
+  text-decoration: none;
+  color:white;
+  display: flex;
+}
+.btm2>p{
+  font-family: neu;
+  font-size: 1.5vw;
+}
 
 .loader{
   height: 100%;
@@ -600,7 +620,15 @@ body {
 .page6{
   min-height: 70vh;
 }
+
+.pageblank{
+  height: 50vh;
+}
 /* FOOTER */
+#footer{
+  height: 50vh;
+}
+
 #footer h2 {
   font-size: 7vw;
 }
@@ -609,6 +637,7 @@ body {
 }
 .ftr-btn{
   top: 45vw;
+  left: 0;
   flex-direction: column;
 }
 .ftr-btn1, .ftr-btn2 {
@@ -632,7 +661,7 @@ font-size: 22px;
 }
 
 @media (min-width:576px) and (max-width:991px){
-  nav .nav-second{
+  nav .nav-second>a{
     display: none;
 }
 .pg3-IMG > img{
@@ -698,5 +727,16 @@ font-size: 22px;
 .circle-div-ftr .circle-content{
   font-size: 3.3vw;
 }
+.btm2{
+  position: absolute;
+  top: 85%;
+  left: 60%;
+  transform: translate(-50% , -50%); 
+}
+.btm2>p{
+  font-size: 3rem;
+  font-weight: 200;
+}
+
 }
 

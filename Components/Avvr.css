@@ -362,8 +362,7 @@
     object-fit: cover;
     border-radius: 25px;
   }
-  
-  
+
   /* PAGE-05 */
   .page5 {
       width: 100%;
@@ -535,7 +534,6 @@
     font-size: 1.5vw;
   }
   
-  
   .loader{
     height: 100%;
     width: 100%;
@@ -703,6 +701,7 @@
     font-size: 1vw;
     font-weight: 200;
   }
+
   }
   
   @media (min-width:576px) and (max-width:991px){
@@ -780,6 +779,7 @@
   .circle-div-ftr .circle-content{
     font-size: 3.3vw;
   }
+
   .btm2{
     position: absolute;
     top: 85%;
@@ -790,6 +790,7 @@
     font-size: 3rem;
     font-weight: 200;
   }
+
   }
   
   

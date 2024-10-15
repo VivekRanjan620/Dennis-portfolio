@@ -687,6 +687,10 @@
       top: 21%;
   }
 
+  .page5{
+    height: 50vh;
+  }
+
   .pageblank{
     height: 50vh;
   }
@@ -769,6 +773,10 @@
   }
   .page4AT {
     min-height: 60vh;
+  }
+
+  .page5{
+    height: 55vh;
   }
 
   .pageblank{

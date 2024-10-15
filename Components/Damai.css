@@ -489,6 +489,26 @@
       font-family: neu;
   }
   
+  .btm2{
+    position: absolute;
+    top: 90%;
+    right: -15%;
+    transform: translate(-50% , -50%);
+    background-color: var(--fourth-color);
+    gap: 1vw;
+    padding: 3vw;
+    display: flex;
+  }
+  
+  .btm2>a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+  }
+  .btm2>p{
+    font-family: neu;
+    font-size: 1.5vw;
+  }
   
   .loader{
     height: 100%;
@@ -609,7 +629,14 @@
   .pg6-bigimg{
     height: 40vh;
   }
+  .pageblank{
+    height: 50vh;
+  }
   /* FOOTER */
+  #footer{
+    height: 50vh;
+  }
+  
   #footer h2 {
     font-size: 7vw;
   }
@@ -636,6 +663,17 @@
   .circle-div-ftr .circle-content{
     font-size: 3.3vw;
   }
+  .btm2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  
   }
   
   @media (min-width:576px) and (max-width:991px){
@@ -705,6 +743,16 @@
   }
   .circle-div-ftr .circle-content{
     font-size: 3.3vw;
+  }
+  .btm2{
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 3rem;
+    font-weight: 200;
   }
   }
   

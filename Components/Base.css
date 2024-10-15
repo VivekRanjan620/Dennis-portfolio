@@ -105,8 +105,7 @@
     display: none; 
   }
   
-  
-  
+
   .main {
       position: relative;
       z-index: 10;
@@ -706,8 +705,8 @@
     font-weight: 400;
   }
   .page4{
-    min-height: 80vh;
-    padding-bottom: 20vw;
+    min-height: 40vh;
+    padding-bottom: 10vw;
   }
   .laptop-container{
     width: 90%;
@@ -718,9 +717,15 @@
      width: 90%;
      border-radius: 10px;
   }
+  .page5{
+    height: 50vh;
+  }
   .page6{
-    min-height: 70vh;
+    min-height: 60vh;
     padding-bottom: 5vw;
+  }
+  .page5-1{
+    height: 50vh;
   }
   .pageblank{
     height: 60vh;
