@@ -527,6 +527,11 @@ opacity: 0; */
   flex-direction: column;
 }
 
+.card-hm a {
+  text-decoration: none; 
+  color: inherit;
+}
+
 .card-image-hm {
   background-image: url('https://dennissnellenberg.com/media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice.jpg'); 
   background-size: cover;
@@ -549,16 +554,18 @@ opacity: 0; */
   position: relative;
   z-index: 9;
   color: #010307d5;
+  font-family: neu;
 }
 
 .card-cnt>p{
+  font-family: neu;
   font-size: 2vw;
- color: #1C1D20;
+ color: black;
 }
 
  /* PAGE-04 */
  .page4 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: white;
     padding: 7vw 0vw;
@@ -628,6 +635,27 @@ opacity: 0; */
     top: 23vw;
     margin-left: 11vw;
 }
+.btm2{
+  position: absolute;
+  top: 90%;
+  right: -15%;
+  transform: translate(-50% , -50%);
+  background-color: var(--fourth-color);
+  gap: 1vw;
+  padding: 3vw;
+  display: flex;
+}
+
+.btm2>a{
+  text-decoration: none;
+  color:white;
+  display: flex;
+}
+.btm2>p{
+  font-family: neu;
+  font-size: 1.5vw;
+}
+
 #footer>i{
 position: absolute;
 font-size: 2vw;
@@ -810,27 +838,31 @@ opacity: 0.7;
 }
 .pg2-cnt{
   flex-direction: column;
+  padding: 5vw;
+  padding-top: 10vw;
 }
 .pgr-right>h3{
-  font-size: 4vw;
+  font-size: 6vw;
   line-height: 35px;
   font-weight: 500;
   font-family: neu;
+  color: black;
 }
 .pg2-left p {
   width: 60%;
-  font-size: 2.5vw;
-  line-height: 4vw;
-  padding-top: 4vw;
+  font-size: 4vw;
+  line-height: 5vw;
+  letter-spacing: 0.5vw;
+  padding-top: 7vw;
   padding-left: 0vw;
   opacity: 0.9;
 }
 .circle-div {
   position: absolute;
-  width: 140px;
-  height: 140px;
-  top: 50%;
-  left: 65%;
+  width: 160px;
+  height: 160px;
+  top: 45%;
+  left: 50%;
 }
 
 /* PAGE-03 */
@@ -853,8 +885,8 @@ padding: 8vw;
 padding-bottom: 2vw;
 }
 .card-cnt>p{
-  font-size: 3vw;
- color: #1C1D20;
+  font-size: 4vw;
+ color: black;
  padding-left: 8vw;
  padding-bottom: 5vw;
 }
@@ -863,7 +895,25 @@ padding-bottom: 2vw;
 .page4{
   display: none;
 }
+/* PAGE-05 */
+.pageblank{
+  height: 55vh;
+}
 /* FOOTER */
+#footer{
+  height: 55vh;
+}
+.btm2{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50% , -50%); 
+}
+
+.btm2>p{
+  font-size: 1vw;
+  font-weight: 200;
+}
 #footer h2 {
   font-size: 7vw;
 }

@@ -458,6 +458,27 @@ nav .nav-second a:hover::after {
   display: flex;
   gap: 10px;
 }
+.btm2{
+  position: absolute;
+  top: 90%;
+  right: -15%;
+  transform: translate(-50% , -50%);
+  background-color: var(--fourth-color);
+  gap: 1vw;
+  padding: 3vw;
+  display: flex;
+}
+
+.btm2>a{
+  text-decoration: none;
+  color:white;
+  display: flex;
+}
+.btm2>p{
+  font-family: neu;
+  font-size: 1.5vw;
+}
+
 
 .ftr-btn1,
 .ftr-btn2 {
@@ -623,7 +644,13 @@ nav .nav-second a:hover::after {
     padding-bottom: 5vw;
   }
 
+  .pageblank{
+    height: 55vh;
+  }
   /* FOOTER */
+  #footer{
+    height: 55vh;
+  }
   #footer h2 {
     font-size: 7vw;
   }
@@ -638,6 +665,17 @@ nav .nav-second a:hover::after {
   .ftr-btn2 {
     padding: 4vw 22vw;
     font-size: 2.5vw;
+  }
+  .btm2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+  }
+  
+  .btm2>p{
+    font-size: 1vw;
+    font-weight: 200;
   }
   #footer > i {
     top: 8%;

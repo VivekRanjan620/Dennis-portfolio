@@ -10,6 +10,7 @@ body {
   height: 100%;
 }
 
+
 @font-face {
   font-family: neu;
   src: url(./NeueMontreal-Regular.otf);
@@ -287,7 +288,7 @@ nav .nav-second a:hover::after {
   align-items: center;
   width: 100%;
   min-height: 110vh;
-  background-color: #e4e8e8;
+  background-color: #D0D5D5;
   position: relative;
   flex-direction: column;
   gap: 8vw;
@@ -533,6 +534,27 @@ nav .nav-second a:hover::after {
   font-family: neu;
 }
 
+.btm2{
+  position: absolute;
+  top: 90%;
+  right: -15%;
+  transform: translate(-50% , -50%);
+  background-color: var(--fourth-color);
+  gap: 1vw;
+  padding: 3vw;
+  display: flex;
+}
+
+.btm2>a{
+  text-decoration: none;
+  color:white;
+  display: flex;
+}
+.btm2>p{
+  font-family: neu;
+  font-size: 1.5vw;
+}
+
 .loader {
   height: 100%;
   width: 100%;
@@ -633,11 +655,16 @@ nav .nav-second a:hover::after {
     width: 100%;
   }
   .page4 {
-    min-height: 80vh;
+    min-height: 40vh;
     padding-bottom: 20vw;
   }
   .laptop-container {
     width: 90%;
+  }
+  .pg4 {
+    height: 25vh;
+    top: 5px;
+    border-radius: 5px;
   }
   .pg4-video {
     padding-top: 10vw;
@@ -647,12 +674,40 @@ nav .nav-second a:hover::after {
   }
 
   .page4F {
-    min-height: 30vh;
+    height: 50vh;
+  }
+  .imgphn{
+    width: 25%;
+  }
+
+  .page5{
+    height: 50vh;
+  }
+  .page5 > h2{
+    font-size: 2rem;
+    letter-spacing: 5px;
   }
   .page6 {
-    min-height: 70vh;
+    min-height: 50vh;
+  }
+  .page6 > img{
+    height: 34vh;
+    width: 42vh;
+  }
+  .page7{
+    min-height: 35vh;
+  }
+  .page7 > video{
+    width: 80%;
+    height: 35vh;
+  }
+  .pageblank{
+    height: 50vh;
   }
   /* FOOTER */
+  #footer{
+    height: 50vh;
+  }
   #footer h2 {
     font-size: 7vw;
   }
@@ -661,10 +716,10 @@ nav .nav-second a:hover::after {
   }
   .ftr-btn {
     top: 45vw;
+    left: 0;
     flex-direction: column;
   }
-  .ftr-btn1,
-  .ftr-btn2 {
+  .ftr-btn1 {
     padding: 4vw 22vw;
     font-size: 2.5vw;
   }
@@ -682,6 +737,16 @@ nav .nav-second a:hover::after {
   .circle-div-ftr .circle-content {
     font-size: 3.3vw;
   }
+  .btm2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 1vw;
+    font-weight: 200;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -690,7 +755,7 @@ nav .nav-second a:hover::after {
 }
   .pg3-IMG > img {
     padding-top: 15vw;
-    width: 90%;
+    width: 70%;
     max-height: 65vh;
   }
   .pg3-round {
@@ -706,23 +771,47 @@ nav .nav-second a:hover::after {
     font-weight: 400;
   }
   .page4 {
-    min-height: 80vh;
+    min-height: 65vh;
     padding-bottom: 20vw;
   }
-  .laptop-container {
-    width: 90%;
+  .pg4 {
+    height: 27vh;
+    top: 100px;
+    border-radius: 5px;
   }
-  .pg4-video {
-    padding-top: 10vw;
-    min-height: 40vh;
-    width: 90%;
-    border-radius: 10px;
+  .laptop-container {
+    padding-top: 12vw;
+    width: 70%;
+  }
+  .page5{
+    height: 55vh;
+  }
+  .page4F {
+    height: 60vh;
+  }
+  .imgphn{
+    width: 20%;
   }
   .page6 {
-    min-height: 70vh;
+    min-height: 60vh;
     padding-bottom: 5vw;
   }
+  .page6 > img{
+    height: 48vw;
+  }
+  .page7{
+    min-height: 40vh;
+  }
+  .page7 > video{
+    padding-bottom: 8vw;
+  }
+  .pageblank{
+    height: 60vh;
+  }
   /* FOOTER */
+  #footer{
+    height: 60vh;
+  }
   #footer h2 {
     font-size: 7vw;
   }
@@ -731,6 +820,7 @@ nav .nav-second a:hover::after {
   }
   .ftr-btn {
     top: 45vw;
+    left: 0;
     flex-direction: column;
   }
   .ftr-btn1,
@@ -751,5 +841,15 @@ nav .nav-second a:hover::after {
   }
   .circle-div-ftr .circle-content {
     font-size: 3.3vw;
+  }
+  .btm2{
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 3rem;
+    font-weight: 200;
   }
 }

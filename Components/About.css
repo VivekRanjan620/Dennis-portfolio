@@ -379,7 +379,13 @@ line-height: 2.2vw;
             height: 50vh;
             flex-basis: 100%;
         }
+        .pageblank{
+            height: 50vh;
+        }
         /* FOOTER */
+        #footer{
+            height: 50vh;
+        }
 #footer h2 {
     font-size: 7vw;
   }
@@ -407,6 +413,16 @@ line-height: 2.2vw;
   }
   .circle-div-ftr .circle-content{
     font-size: 3.3vw;
+  }
+  .btm2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 1vw;
+    font-weight: 200;
   }
 }
 
@@ -462,7 +478,14 @@ line-height: 2.2vw;
             line-height: 27px;
             opacity: 0.8;
         }
+
+        .pageblank{
+            height: 60vh;
+        }
         /* FOOTER */
+        #footer{
+            height: 60vh;
+        }
 #footer h2 {
     font-size: 7vw;
   }
@@ -490,6 +513,16 @@ line-height: 2.2vw;
   }
   .circle-div-ftr .circle-content{
     font-size: 3.3vw;
+  }
+  .btm2{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50% , -50%); 
+  }
+  .btm2>p{
+    font-size: 3rem;
+    font-weight: 200;
   }
 }
 
