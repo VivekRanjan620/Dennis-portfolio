@@ -1033,7 +1033,7 @@ font-size: 22px;
   display: block;
   background-color: white;
   display: flex;
-  padding-left: 6vw;
+  padding-left: 5vw;
   justify-content: space-between;
 }
 .card-image-hm{
