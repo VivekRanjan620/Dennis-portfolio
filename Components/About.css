@@ -324,7 +324,7 @@ line-height: 2.2vw;
     .sec-2{
         flex-direction: column;
          height: 80vh;
-
+         gap: 2vw;
     }
     .sec2-lft{
         font-size: 5vw;
