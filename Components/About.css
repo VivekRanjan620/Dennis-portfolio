@@ -63,13 +63,12 @@ html,body{
 
 /* SEC-02 */
 .sec-2{
-    width: 100%;
-    height: 100vh;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     padding: 5vw;
     background-color: #FAFBFB;
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .sec2-lft{
@@ -83,8 +82,8 @@ html,body{
 
 .sec2-right{
     flex-basis: 60%; 
-    width: 50vw;
     height: 60vw;
+    width:100%;
     background-image: url(https://dennissnellenberg.com/assets/img/DSC07312-2.jpg);
     background-size: cover;
     background-position: center;
@@ -92,17 +91,7 @@ html,body{
 }
 
 
-.sec2-right {
-    flex-basis: 60%;
-}
 
-.sec2-right > img {
-    width: 48vw; 
-    height: 60vw; 
-    object-fit: cover; 
-    display: block; 
-    margin: 0 auto; 
-}
 
 
 /* SEC-03 */
@@ -294,6 +283,17 @@ line-height: 2.2vw;
 }
    
 @media (max-width:575px){
+     /* HAMBURGER */
+  .menu{
+    width: 250px;
+    padding-top: 20vw;
+  }
+  .menu a{
+   font-size: 5vw;
+   padding-left: 20vw;
+   padding-bottom: 5vw;
+  }
+    /* PAGE-01 */
     nav .nav-second{
         display: none;
     }
@@ -323,17 +323,17 @@ line-height: 2.2vw;
     /* SEC-02  */
     .sec-2{
         flex-direction: column;
+         height: 80vh;
+
     }
     .sec2-lft{
-        width: 100%;
         font-size: 5vw;
         line-height: 6.3vw;
         padding-left: 2vw;
         padding-top: 25vw;
     }
     .sec2-right{
-        width: 100%;
-        height: 100%;
+        flex-basis: 100%;
     }
     /* SEC-03 */
     .sec3{
@@ -432,19 +432,20 @@ line-height: 2.2vw;
     }
     /* SEC-02  */
     .sec-2{
-        flex-direction: column;
+       flex-direction: column;
+       height: 80vh;
     }
     .sec2-lft{
         width: 100%;
-        font-size: 3vw;
+        font-size: 4vw;
         line-height: 5.3vw;
         padding-left: 2vw;
-        padding-top: 25vw;
+        padding-top: 10vw;
     }
-    .sec2-right{
+    /* .sec2-right{
         width: 100%;
         height: 100%;
-    }
+    } */
     /* SEC-03 */
     .sec3{
         background-color: white;

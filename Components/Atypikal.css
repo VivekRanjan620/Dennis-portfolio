@@ -617,6 +617,17 @@
   }
   
   @media (max-width:575px){
+     /* HAMBURGER */
+  .menu{
+    width: 250px;
+    padding-top: 20vw;
+  }
+  .menu a{
+   font-size: 5vw;
+   padding-left: 20vw;
+   padding-bottom: 5vw;
+  }
+    /* PAGE-01 */
     nav .nav-second{
       display: none;
   }

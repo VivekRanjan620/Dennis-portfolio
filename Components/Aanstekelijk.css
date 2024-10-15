@@ -588,6 +588,17 @@
   }
   
   @media (max-width:575px){
+     /* HAMBURGER */
+  .menu{
+    width: 250px;
+    padding-top: 20vw;
+  }
+  .menu a{
+   font-size: 5vw;
+   padding-left: 20vw;
+   padding-bottom: 5vw;
+  }
+    /* PAGE-01 */
     nav .nav-second{
       display: none;
   }
@@ -636,18 +647,20 @@
   .laptop-container{
     width: 90%;
   }
-  .pg4-video{
-    padding-top: 10vw;
-    min-height: 40vh;
-     width: 90%;
-     border-radius: 10px;
-  }
+ 
   .page5{
     height: 60vh;
   }
   .page6{
-    min-height: 70vh;
+    min-height: 30vh;
   }
+  .page6 .pg4-video .pg4-video-content{
+    /* padding-top: 10vw;
+    min-height: 40vh;
+    width: 90%;
+    border-radius: 10px; */
+    display: none;
+ }
   .pageblank{
     height: 55vh;
   }
