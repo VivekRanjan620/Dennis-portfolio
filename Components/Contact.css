@@ -1,0 +1,486 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  :root {
+    --primary-color: #ffff;
+    --secondary-color: #2ecc71;
+    --font-size: 16px;
+    --third-color:#FDFDFD;
+    --fourth-color:#1C1D20;
+  }
+  
+  @font-face {
+    font-family: neu;
+    src: url(./NeueMontreal-Regular.otf);
+  }
+
+  .main{
+    background-color: var(--fourth-color);
+  }
+  
+.page1 {
+    width: 100%;
+    height: 20vh;
+    background-color: #1C1D20;
+    position: relative;
+  }
+  
+  nav {
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: white;
+  }
+  
+  .nav-first p {
+    font-weight: 500;
+    color: var(--third-color);  
+    font-family: neu;
+  }
+  
+  nav .nav-second {
+    display: flex;
+    gap: 2vw;
+  }
+  
+  nav .nav-second a {
+    font-size: 1.3vw;
+    opacity: 0.9;
+    color: var(--third-color);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-family: neu;
+  }
+  
+  /* Hover effect for the a tags */
+  nav .nav-second a::after {
+    content: ''; 
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -12px; 
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease; 
+  }
+  
+  /* When hovering the a tag */
+  nav .nav-second a:hover {
+    transform: translateY(-7px); 
+  }
+  
+  nav .nav-second a:hover::after {
+    transform: translateX(-50%) scale(1); 
+  }
+
+  .page2{
+    width: 100%;
+    display: flex;
+    background-color:var(--fourth-color) ;
+  }
+
+.sec1{
+    color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 13vw;
+    padding-top: 3vw;
+}
+.sec1>h1{
+    padding-top: 50px;
+    width: 90%;
+    font-size: 6vw;
+    font-weight: 200;
+    font-family: neu;
+    padding: 30px;
+    font-weight: 100;
+}
+
+ form {
+    padding: 15px;
+    border-radius: 12px;
+    width: 60%;
+}
+
+h2{
+    font-size: 22px;
+    color: var(--third-color);
+    opacity: 0.9;
+    font-family: neu;
+    font-weight: 100;
+    padding: 50px 30px 20px 30px;
+    border-top: 2.5px solid rgb(66, 65, 65);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #1C1D20;
+    outline: none;
+    font-size: 1em;
+    font-weight:bolder;
+    font-family: neu;
+    padding: 10px 30px;
+    color: white;
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.sec1-ln{
+    width: 75%;
+    height: 1px;
+    background-color: rgba(94, 93, 93, 0.685);
+    margin: 15vw 2vw;
+    position: relative;
+}
+
+.sec1-rn{
+    width: 170px;
+    height: 170px;
+    background-color: #455CE9;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    right: 10px;
+}
+.sec1-rn>p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-family: neu;
+}
+
+.sec2{
+    padding-right: 20vw;
+    padding-top: 10vw;
+   
+}
+
+.sec2-img>img{
+    object-fit: cover;
+    height: 15vh;
+   margin-top: 2vw;
+  }
+
+  .sec2-cont{
+    display: flex;
+    flex-direction: column;
+    color: white;
+   font-family: neu;
+  }
+
+  .sec2-cont>p{
+     font-size: 12px;
+     font-weight: 700;
+     text-transform: uppercase;
+     color: rgb(124, 121, 121);
+     padding-top: 7vw;
+  }
+
+  .sec2-cont>h4{
+    font-size: 16px;
+    padding: 1vw 0;
+    font-weight: 100;
+  }
+  .sec2-cont>h3{
+    font-size: 16px;  
+    padding: 0.5vw 0;
+  }
+
+.sec2-cont p:nth-of-type(2){
+   padding-top: 5vw;
+}
+
+.sec2-cont p:nth-of-type(3){
+    padding-top: 5vw;
+}
+
+.sec2-cont>h5{
+    font-size: 1.2vw;
+    font-weight: normal;
+    padding: 0.5vw 0;
+}
+
+.btm2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: var(--fourth-color);
+    gap: 1vw;
+    padding: 3vw;
+}
+
+.btm2>a{
+    text-decoration: none;
+    color:white;
+    font-family: neu;
+}
+
+.btm1{
+  padding: 4vw;
+  padding-top: 15vw;
+  background-color: var(--fourth-color);
+  display: flex;
+  gap: 2vw;
+}
+
+ .btm11>p{
+    color: white;
+    text-transform: uppercase;
+}
+
+.btm11 p:nth-of-type(2){
+    padding-top: 1vw;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    z-index: 999;
+  }
+  
+  .hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #333335; 
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: rgb(189, 183, 183);
+    transition: transform 0.3s ease; 
+  }
+  
+  .cross-icon {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed; 
+    top: 50px;
+    right: 30px;
+    z-index: 1001; 
+    color: white;
+    background-color: #333335; 
+    border-radius: 50%; 
+    padding: 10px 15px;
+    transition: transform 0.3s ease; 
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    height: 100%;
+    width: 500px;
+    background-color: #1C1D20;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    display: none;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  
+  .hamburger-icon:hover{
+    background-color: rgb(61, 61, 218);
+  }
+  .cross-icon:hover{
+    background-color:  rgb(61, 61, 218);
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s;
+    font-size: 2.5vw;
+    display: flex;
+    gap: 1vw;
+    margin-top: 2vw;
+    padding-left: 5vw;
+    transition: transform 0.3s ease; 
+  }
+  .menu>a:hover{
+    transform: translateX(10px);
+    transform: translateY(-8px);
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .menu.active {
+    display: flex; 
+    right: 0; 
+  }
+  
+  .menu.active ~ .cross-icon {
+    display: block; 
+  }
+  
+  .menu.active ~ .hamburger-icon {
+    display: none; 
+  }
+
+  .loader{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.5s;
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .loader>h1{
+    font-size: 4vw;
+      color: transparent;
+      background: linear-gradient(to right,orange,orangered);
+      -webkit-background-clip: text;
+      position: absolute;
+      opacity: 0;
+      animation-name: load;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-timing-function: linear;
+      font-family: neu;
+  }
+  
+  .loader h1:nth-child(2){
+    animation-delay: 2s;
+  }
+  .loader h1:nth-child(3){
+    animation-delay: 3s;
+  }
+  
+  
+  @keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+  
+
+  /* RESPONSIVE */
+  @media (max-width:575px) {
+     /* HAMBURGER */
+  .menu{
+    width: 250px;
+    padding-top: 20vw;
+  }
+  .menu a{
+   font-size: 5vw;
+   padding-left: 20vw;
+   padding-bottom: 5vw;
+  }
+    /* PAGE-01 */
+    nav .nav-second{
+        display: none;
+    }
+    .page2{
+        flex-direction: column-reverse;
+    }
+    .sec2-cont{
+        padding: 3vw;
+        padding-left: 8vw;
+    }
+    .sec2-img>img{
+        padding-left: 5vw;
+        height: 12vh;
+    }
+    .sec2-cont p:nth-of-type(3){
+        display: none;
+    }
+    .sec2-cont h5{
+        display: none;
+    }
+    .sec1>h1{
+        display: none;
+    }
+    form{
+        width: 100%;
+    }
+    .sec1{
+        padding-left: 1vw;
+    }
+    .btm1{
+        display: none;
+    }
+    /* .btm2{
+        display: none;  
+    } */
+    .sec1-rn{
+        width: 145px;
+        height: 145px;
+    }
+    .loader>h1{
+        font-size: 10vw;
+    }
+  }
+
+  @media (min-width:576px) and (max-width:991px) {
+    nav .nav-second{
+        display: none;
+    }
+      form{
+        width: 80%;
+      }
+      .sec1{
+        padding-left: 7vw;
+      }
+      .sec1>h1{
+        width: 100%;
+      }
+      .sec2{
+        padding-right: 3vw;
+      }
+        .sec2-cont>h5{
+            font-size: 1rem;
+        }
+        .sec2-cont>p{
+            font-size: 1rem;
+        }
+        .sec2-cont>h4{
+            font-size: 1.3rem;
+        }
+      .btm1{
+        display: none;
+    }
+    .btm2{
+        display: none;
+    }
+  }
