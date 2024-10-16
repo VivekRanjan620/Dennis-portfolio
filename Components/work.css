@@ -191,53 +191,7 @@ nav .nav-second a:hover::after {
   font-family: neu;
 }
 
-/* .pg1-btn1 {
-  display: flex;
-  gap: 0.5vw;
-  margin-top: 1vw;
-}
-
-.pg1-btn1 button {
-  padding: 1.5vw 2.5vw;
-  background-color: transparent;
-  color: black;
-  border-radius: 50px;
-  font-size: 1.2vw;
-  border: 1px solid gray;
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.pg1-btn1 button::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #1065c0;
-  transition: top 0.4s ease;
-  z-index: 0;
-  border-radius: 50px;
-}
-
-.pg1-btn1 button:hover {
-  color: #fff;
-}
-
-.pg1-btn1 button:hover::before {
-  top: 0;
-} */
-
 /* UNIVERSE.IO */
-
 .button2 {
   display: inline-block;
   transition: all 0.2s ease-in;
@@ -690,9 +644,14 @@ nav .nav-second a:hover::after {
   }
   .pg1-btn1 {
     margin-top: 12vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
   }
   .pg1-btn1 button {
-    padding: 4vw 10vw;
+    padding: 4vw 8vw;
     font-size: 3vw;
   }
 
