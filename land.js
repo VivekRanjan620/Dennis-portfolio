@@ -45,7 +45,7 @@
           ease: Power3,
           top: diff,
           left: dets.clientX,
-          rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
+          // rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
         });
       });
     });  
@@ -82,13 +82,14 @@
   //   })
   // })
   
-  imgDiv.addEventListener("mouseleave",function(){
-    cursor.innerHTML=""
-    gsap.to(cursor,{
-      scale:0,
-      backgroundColor:""
-    })
-  })
+
+  // imgDiv.addEventListener("mouseleave",function(){
+  //   cursor.innerHTML=""
+  //   gsap.to(cursor,{
+  //     scale:0,
+  //     backgroundColor:""
+  //   })
+  // })
   
   // HAMBURGER
 function hamburger(){
@@ -109,3 +110,40 @@ crossIcon.addEventListener('click', () => {
 });
 }
 hamburger()
+
+
+//MENU
+function menu(){
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    // Toggle menu and cross icon visibility
+    const menu = document.querySelector('.nav-second');
+    const crossIcon = document.getElementById('cross-icon-nav');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+  
+    menu.classList.toggle('menu-open');
+    crossIcon.classList.toggle('visible'); 
+  
+    // Show or hide the hamburger icon and change background color for the cross icon
+    if (menu.classList.contains('menu-open')) {
+        hamburgerIcon.classList.add('hidden'); 
+        crossIcon.classList.add('active'); 
+    } else {
+        hamburgerIcon.classList.remove('hidden');
+        crossIcon.classList.remove('active');
+    }
+  });
+  
+  // Add event listener for the cross icon to close the menu
+  document.getElementById('cross-icon-nav').addEventListener('click', function() {
+    const menu = document.querySelector('.nav-second');
+    const crossIcon = document.getElementById('cross-icon-nav');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+  
+    menu.classList.remove('menu-open');
+    crossIcon.classList.remove('visible');
+    hamburgerIcon.classList.remove('hidden'); 
+    crossIcon.classList.remove('active'); 
+  });
+}
+menu();
+
