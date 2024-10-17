@@ -91,59 +91,33 @@
   //   })
   // })
   
-  // HAMBURGER
-function hamburger(){
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-const crossIcon = document.getElementById('cross-icon');
-const menu = document.getElementById('menu');
-
-hamburgerIcon.addEventListener('click', () => {
-  menu.classList.add('active'); 
-  hamburgerIcon.classList.add('hidden'); 
-  crossIcon.classList.remove('hidden');
-});
-
-crossIcon.addEventListener('click', () => {
-  menu.classList.remove('active'); 
-  hamburgerIcon.classList.remove('hidden'); 
-  crossIcon.classList.add('hidden');
-});
-}
-hamburger()
 
 
-//MENU
-function menu(){
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-    // Toggle menu and cross icon visibility
-    const menu = document.querySelector('.nav-second');
-    const crossIcon = document.getElementById('cross-icon-nav');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-  
-    menu.classList.toggle('menu-open');
-    crossIcon.classList.toggle('visible'); 
-  
-    // Show or hide the hamburger icon and change background color for the cross icon
-    if (menu.classList.contains('menu-open')) {
-        hamburgerIcon.classList.add('hidden'); 
-        crossIcon.classList.add('active'); 
-    } else {
-        hamburgerIcon.classList.remove('hidden');
-        crossIcon.classList.remove('active');
+// Select the hamburger icon and sidebar elements
+function hamburgers() {
+  const hamburgerIcon = document.querySelector('.hamburger-menu');
+  const menuToggle = document.querySelector('.menu-toggle'); 
+  const sidebar = document.querySelector('.sidebar');
+
+  // Function to toggle the 'show-sidebar' class on the sidebar
+  function toggleSidebar() {
+    sidebar.classList.toggle('show-sidebar');
+  }
+
+  // Function to close the sidebar when clicking outside of it
+  function closeSidebarOnClickOutside(event) {
+    if (!sidebar.contains(event.target) && !hamburgerIcon.contains(event.target) && !menuToggle.contains(event.target)) {
+      // If the click happens outside the sidebar, hamburger, or menu toggle, remove 'show-sidebar'
+      sidebar.classList.remove('show-sidebar');
     }
-  });
-  
-  // Add event listener for the cross icon to close the menu
-  document.getElementById('cross-icon-nav').addEventListener('click', function() {
-    const menu = document.querySelector('.nav-second');
-    const crossIcon = document.getElementById('cross-icon-nav');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-  
-    menu.classList.remove('menu-open');
-    crossIcon.classList.remove('visible');
-    hamburgerIcon.classList.remove('hidden'); 
-    crossIcon.classList.remove('active'); 
-  });
-}
-menu();
+  }
 
+  // Event listener for both hamburger and menu toggle buttons to toggle the sidebar
+  hamburgerIcon.addEventListener('click', toggleSidebar);
+  menuToggle.addEventListener('click', toggleSidebar); // Add event listener for the menu toggle button
+
+  // Event listener for the document to close the sidebar when clicking outside of it
+  document.addEventListener('click', closeSidebarOnClickOutside);
+}
+
+hamburgers();
